@@ -1,0 +1,11 @@
+server:
+  port: 7004
+javax:
+  sql:
+    DataSource:
+      personasDataSource:
+        dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
+        dataSource:
+          databaseName: "ejemplo"
+          user: "postgres"
+          password: "admin"

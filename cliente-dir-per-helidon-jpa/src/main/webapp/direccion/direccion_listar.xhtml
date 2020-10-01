@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Gestión Direcciones</title>
+</h:head>
+<h:body>
+
+
+
+	<b:form horizontal="true">
+
+
+		<b:container fluid="true">
+
+
+
+			<h3>GESTION DE DIRECCIONES</h3>
+
+			<h4>LISTADO DE DIRECCIONES</h4>
+			<br />
+
+			<b:row>
+				<b:column span="1" >
+					<h:outputLabel value="Seleccionar Tema: " />
+				</b:column>
+				<b:column span="4">
+					<b:selectOneMenu value="#{Mbd.color}" tiny-screen="one-fourth"
+						onchange="ajax:Mbd.cambiarColor()"  >
+
+						<f:selectItem itemValue="paper" />
+						<f:selectItem itemValue="default" />
+						<f:selectItem itemValue="patternfly" />
+						<f:selectItem itemValue="cerulean" />
+						<f:selectItem itemValue="cosmo" />
+						<f:selectItem itemValue="cyborg" />
+						<f:selectItem itemValue="darkly" />
+						<f:selectItem itemValue="flatly" />
+						<f:selectItem itemValue="journal" />
+						<f:selectItem itemValue="lumen" />
+						<f:selectItem itemValue="readable" />
+						<f:selectItem itemValue="sandstone" />
+						<f:selectItem itemValue="simplex" />
+						<f:selectItem itemValue="slate" />
+						<f:selectItem itemValue="spacelab" />
+						<f:selectItem itemValue="superhero" />
+						<f:selectItem itemValue="united" />
+						<f:selectItem itemValue="yeti" />
+					</b:selectOneMenu>
+
+				</b:column>
+
+			</b:row>
+			<b:row>
+				<b:column span="5">
+					<b:dataTable value="#{Mbd.lista}" var="todos" 
+						style="width:100%;border-bottom:0px;">
+						<b:dataTableColumn value="#{todos.idDireccion}" label="ID" />
+						<b:dataTableColumn value="#{todos.descripcion}"
+							label="Descripción" />
+
+
+					</b:dataTable>
+				</b:column>
+			</b:row>
+			<br />
+			<b:row>
+
+				<b:column span="5">
+
+					<b:panel title="Búsqueda" look="primary">
+						<b:row>
+							<b:column span="8">
+								<b:inputText label="Buscar por Id:" colMd="6" labelColMd="6"
+									value="#{Mbd.direccion.idDireccion}" required="true" />
+							</b:column>
+
+							<b:column span="4">
+
+								<b:commandButton value="Buscar" actionListener="#{Mbd.buscar}"
+									look="primary" />
+
+
+							</b:column>
+						</b:row>
+
+						<b:row>
+							<b:column offset="4" span="2">
+
+								<h:outputLabel value="id: " />
+							</b:column>
+							<b:column span="2">
+								<h:outputLabel value="#{Mbd.direccion.idDireccion}" />
+							</b:column>
+						</b:row>
+						<b:row>
+							<b:column offset="4" span="2">
+								<h:outputLabel value="Cédula: " />
+							</b:column>
+							<b:column span="2">
+								<h:outputLabel value="#{Mbd.direccion.descripcion}" />
+							</b:column>
+						</b:row>
+					</b:panel>
+					<b:row>
+						<b:column offset="4">
+
+							<b:commandButton value="Regresar menú principal"
+								action="/index?faces-redirect=true" />
+						</b:column>
+					</b:row>
+				</b:column>
+			</b:row>
+
+
+		</b:container>
+	</b:form>
+
+
+
+
+
+</h:body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Gestión Direcciones</title>
+</h:head>
+<h:body>
+	<h:form id="loginForm">
+		<br />
+
+		<b:container fluid="true">
+			<b:row>
+				<b:column offset="4" medium-screen="1">
+					<h:outputText value="Username:" />
+				</b:column>
+				<b:column medium-screen="2">
+					<b:inputText placeholder="Username" />
+				</b:column>
+
+			</b:row>
+			<b:row>
+				<b:column offset="4" medium-screen="1">
+					<h:outputText value="Password:" />
+				</b:column>
+				<b:column medium-screen="2">
+					<b:inputSecret placeholder="Password" />
+				</b:column>
+
+			</b:row>
+			<!-- esta es una manera pero la que esta abajo es mucho más precisa 	<b:row> -->
+			<!-- 				<b:column span="1" offset="5"> -->
+			<!-- 					<b:commandButton value="login" look="primary" style="width:100%" /> -->
+			<!-- 				</b:column> -->
+			<!-- 				<b:column span="1"> -->
+			<!-- 					<b:commandButton value="password forgotten" look="danger" -->
+			<!-- 						style="width:100%" /> -->
+			<!-- 				</b:column> -->
+			<!-- 			</b:row> -->
+			<b:row>
+				<b:column span="2" offset="5">
+					<b:row>
+						<b:column span="4">
+							<b:commandButton value="login" look="primary" style="width:100%" />
+						</b:column>
+						<b:column span="8">
+							<b:commandButton value="password forgotten" look="danger"
+								style="width:100%" />
+						</b:column>
+					</b:row>
+				</b:column>
+			</b:row>
+		</b:container>
+
+	</h:form>
+</h:body>
+</html>

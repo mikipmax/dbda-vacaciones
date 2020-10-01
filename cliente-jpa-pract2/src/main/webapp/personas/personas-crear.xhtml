@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Gestion Todos</title>
+</h:head>
+<h:body>
+	<div align="center">
+		<h2>GESTION DE TODOS</h2>
+		<br />
+		<h3>Inserción de Personas</h3>
+		<h:form id="frm">
+	
+			<br />
+			
+		
+			<h:panelGrid id="pg-id" columns="2" >
+			
+				<h:outputLabel value="id: " />
+				<h:inputText value="#{Mb.persona.id}" />
+
+				<h:outputLabel value="Cédula: " />
+				<h:inputText value="#{Mb.persona.cedula}" />
+
+				<h:outputLabel value="Nombre: " />
+				<h:inputText value="#{Mb.persona.nombre}" />
+
+				<h:outputLabel value="Dirección: " />
+				<h:inputText value="#{Mb.persona.direccion}" />
+
+				<h:outputLabel value="Tipo Dirección: " />
+				<h:inputText value="#{Mb.persona.tipoDireccion.idDireccion}" />
+			</h:panelGrid>
+			<br />
+			<br />
+				<h:commandButton value="Registrar"
+				action="#{Mb.crear}" />
+				
+				
+			<br />
+			<br />
+			
+				
+				
+			<h:commandButton value="Regresar menú principal"
+				action="/index?faces-redirect=true" />
+		</h:form>
+	</div>
+</h:body>
+</html>

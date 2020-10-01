@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Bienvenido</title>
+</h:head>
+<h:body>
+
+	<h2 align="center">APLICACION CLIENTE WEB CON RESTEASY PROXY JPA
+		XML</h2>
+	<div align="center">
+		<h:form>
+			<h3>Gestión de Personas</h3>
+			<br />
+			<h:panelGrid columns="1">
+
+				<h:commandButton value="Listar Personas"
+					action="#{Mb.redireccionTodos}" />
+				<h:commandButton value="Editar Personas"
+					action="personas/personasEditar?faces-redirect=true" />
+				<h:commandButton value="Crear Personas"
+					action="personas/personas-crear?faces-redirect=true" />
+				<h:commandButton value="Eliminar Personas"
+					action="personas/personas-eliminar?faces-redirect=true" />
+			</h:panelGrid>
+			<h3>Gestión de Direcciones</h3>
+			<h:panelGrid columns="1">
+			<h:commandButton value="Listar Direcciones" action="#{Mbd.listar}" />
+				<h:commandButton value="Editar Direcciones"
+					action="direccion/direccion_editar?faces-redirect=true" />
+				<h:commandButton value="Crear Direcciones"
+					action="direccion/direccion_crear?faces-redirect=true" />
+				<h:commandButton value="Eliminar Direcciones"
+					action="direccion/direccion_eliminar?faces-redirect=true" />
+			</h:panelGrid>
+		</h:form>
+	</div>
+</h:body>
+</html>

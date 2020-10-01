@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Bienvenido</title>
+</h:head>
+<h:body>
+<h:form>
+	
+	
+	
+
+		
+		<h:commandButton value="Listar  Singers" action="#{Mb.redireccionTodos}"/>
+		<h:commandButton value="Editar Singers" action="personas/personasEditar?faces-redirect=true"/>
+		<h:commandButton value="Crear Singers" action="personas/personas-crear?faces-redirect=true"/>
+		<h:commandButton value="Eliminar Singers" action="personas/personas-eliminar?faces-redirect=true"/>
+		<hr/>
+		<br/>
+		<h:commandButton value="Listar  Albums" action="#{Mba.redireccionTodos}"/>
+		<h:commandButton value="Editar Albums" action="albums/albumsEditar?faces-redirect=true"/>
+		<h:commandButton value="Crear Albums" action="albums/albums-crear?faces-redirect=true"/>
+		<h:commandButton value="Eliminar Albums" action="albums/albums-eliminar?faces-redirect=true"/>
+		</h:form>
+
+</h:body>
+</html>

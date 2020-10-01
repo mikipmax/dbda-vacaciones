@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Gestion Todos</title>
+</h:head>
+<h:body>
+	<div align="center">
+		<h2>GESTION DE TODOS</h2>
+		<br />
+		<h3>Edición de Personas</h3>
+		<h:form id="frm">
+	
+			<br />
+			<h:outputLabel value="Buscar por Id: " />
+			<h:inputText value="#{Mba.album.id}" required="true" />
+			<h:commandButton  value="Buscar" actionListener="#{Mb.redireccionId}"/>
+
+		
+			<h:panelGrid id="pg-id" columns="2" rendered="#{Mb.bandera eq true}">
+				<h:outputLabel value="id: " />
+				<h:outputLabel value="#{Mba.album.id}" />
+
+				<h:outputLabel value="Singer id " />
+				<h:inputText value="#{Mba.album.singerId}" />
+
+				<h:outputLabel value="Title" />
+				<h:inputText value="#{Mba.album.title}" />
+
+				<h:outputLabel value="Release Date " />
+				<h:inputText value="#{Mba.album.releaseDate}" >
+				<f:convertDateTime pattern="yyyy-MM-dd"/>
+				</h:inputText>
+				
+			</h:panelGrid>
+			<br />
+			<br />
+				<h:commandButton value="Actualizar"
+				action="#{Mba.editar}" />
+				
+				
+			<br />
+			<br />
+			
+				
+				
+			<h:commandButton value="Regresar menú principal"
+				action="/index?faces-redirect=true" />
+		</h:form>
+	</div>
+</h:body>
+</html>

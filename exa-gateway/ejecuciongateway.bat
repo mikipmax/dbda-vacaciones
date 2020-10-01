@@ -1,0 +1,1 @@
+java -Dserver.port=7006 -jar exa-gateway-capsule.jar

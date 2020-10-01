@@ -1,0 +1,2 @@
+java -Dthorntail.http.port=7003 -Dthorntail.bind.address=127.0.0.1 -jar app.jar
+

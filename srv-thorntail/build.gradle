@@ -1,0 +1,43 @@
+apply plugin: 'thorntail'
+apply plugin: 'war'
+apply plugin: 'java-library'
+
+buildscript{
+	repositories{
+		mavenCentral()
+		maven{
+			url "https://plugins.gradle.org/m2/"
+		}
+	}
+	dependencies{
+		classpath group: 'io.thorntail', name: 'thorntail-gradle-plugin', version: '2.6.0.Final'
+	}
+}
+
+thorntail {
+  properties {
+    swarm.http.host = 'localhost'
+    swarm.http.port = 8181
+  }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    //Obtengo todas las deendencias gestiona todas las dependencias
+	implementation enforcedPlatform("io.thorntail:bom:2.6.0.Final")
+	implementation "io.thorntail:jaxrs"
+	implementation "io.thorntail:cdi"
+	implementation "io.thorntail:jpa"
+	
+	implementation "io.thorntail:microprofile-config"
+	
+	
+	//compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+	//compile group: 'org.jboss.resteasy', name: 'resteasy-jaxb-provider', version: '3.9.2.Final'
+	//compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.29.1'
+	
+	//compile group: 'org.postgresql', name: 'postgresql', version: '42.2.10'
+}

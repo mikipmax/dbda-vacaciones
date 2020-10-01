@@ -1,0 +1,9 @@
+javax:
+  sql:
+    DataSource:
+      personasDataSource:
+        dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
+        dataSource:
+          databaseName: "distribuida"
+          user: "postgres"
+          password: "123"

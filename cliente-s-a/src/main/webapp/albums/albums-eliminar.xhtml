@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Gestion Todos</title>
+</h:head>
+<h:body>
+	<div align="center">
+		<h2>GESTION DE TODOS</h2>
+		<br />
+		<h3>Eliminar Personas</h3>
+		<h:form id="frm">
+
+			<br />
+			<h:outputLabel value="Id: " />
+			<h:inputText value="#{Mba.album.id}" required="true" />
+
+			<h:commandButton value="Eliminar" action="#{Mba.eliminar}" />
+			<br />
+			<br />
+			<h:commandButton value="Regresar menú principal"
+				action="/index?faces-redirect=true" />
+		</h:form>
+	</div>
+</h:body>
+</html>

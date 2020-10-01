@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Gestión Direcciones</title>
+</h:head>
+<h:body>
+	<div align="center">
+		<h2>GESTION DE DIRECCIONES</h2>
+		<br />
+		<h3>INSERCIÓN DE DIRECCIONES</h3>
+		<h:form id="frm">
+			
+
+
+			<h:panelGrid id="pg-id" columns="2">
+
+				<h:outputLabel value="id: " />
+				<h:inputText value="#{Mbd.direccion.idDireccion}" />
+
+				<h:outputLabel value="Cédula: " />
+				<h:inputText value="#{Mbd.direccion.descripcion}" />
+
+			</h:panelGrid>
+			<h:commandButton value="Registrar" action="#{Mbd.crear}"/>
+			<br />
+			<br />
+		</h:form>
+		<h:form>
+			<h:commandButton value="Regresar menú principal"
+				action="/index?faces-redirect=true" />
+		</h:form>
+	</div>
+</h:body>
+</html>

@@ -1,0 +1,36 @@
+buildscript{
+repositories{
+mavenCentral()
+}
+
+dependencies{
+classpath group: 'io.thorntail', name: 'thorntail-gradle-plugin', version: '2.6.0.Final'
+}
+}
+
+//ejecuta 
+apply plugin: 'thorntail'
+apply plugin: 'war'
+
+repositories{
+jcenter()
+}
+
+dependencies {
+implementation enforcedPlatform("io.thorntail:bom:2.6.0.Final")
+implementation "io.thorntail:jaxrs"
+implementation "io.thorntail:cdi"
+implementation "io.thorntail:jsonb"
+implementation "io.thorntail:jpa"
+//implementation 'io.thorntail:topology-consul:2.6.0.Final'
+implementation 'io.thorntail:microprofile:2.6.0.Final'
+compile group: 'com.ecwid.consul', name: 'consul-api', version: '1.4.4'
+compile group: 'org.postgresql', name: 'postgresql', version: '42.2.8'
+compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.7.0'
+compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.7.Final'
+}
+
+task copyLibs(type:Copy){
+from configurations.runtime
+into 'build/libs/libs'
+}

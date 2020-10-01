@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Bienvenido</title>
+</h:head>
+<h:body style="background-image: url('img/bg-dark-3.jpg')">
+
+
+
+	<b:form>
+<b:container>
+		<b:navBar brand="Inicio" brandHref="index.xhtml"  style="margin-bottom: 0px;background: linear-gradient(to right, rgba(117,88,165,1) 0%,rgba(37,184,213,1) 99%)!important;color: #fff!important;border: 0px">
+			<f:facet name="kebab">
+				<span class="fa fa-chevron-right"></span>
+			</f:facet>
+			<b:navbarLinks>
+				<b:dropMenu value="Gestionar Personas"
+					contentDisabled="#{navBarBean.dropMenuDisabled}">
+					<b:navCommandLink value="Listar" action="#{Mb.redireccionTodos}" />
+					<b:navCommandLink value="Editar"
+						action="personas/personasEditar?faces-redirect=true" />
+					<b:navCommandLink value="Crear"
+						action="personas/personas-crear?faces-redirect=true" />
+					<b:navCommandLink value="Eliminar"
+						action="personas/personas-eliminar?faces-redirect=true" />
+				</b:dropMenu>
+				<b:dropMenu value="Gestionar Direcciones">
+					<b:navCommandLink value="Listar" action="#{Mbd.listar}" />
+					<b:navCommandLink value="Editar"
+						action="direccion/direccion_editar?faces-redirect=true" />
+					<b:navCommandLink value="Crear"
+						action="direccion/direccion_crear?faces-redirect=true" />
+					<b:navCommandLink value="Eliminar"
+						action="direccion/direccion_eliminar?faces-redirect=true" />
+				</b:dropMenu>
+
+
+			</b:navbarLinks>
+			<b:navbarLinks pull="right">
+
+
+
+
+				<b:selectOneMenu value="#{Mbd.color}"
+					onchange="ajax:Mbd.cambiarColor()" style="margin-top: 10%!important;height: 90%!important;width:80%"> 
+
+					<f:selectItem itemValue="paper" />
+					<f:selectItem itemValue="default" />
+					<f:selectItem itemValue="patternfly" />
+					<f:selectItem itemValue="cerulean" />
+					<f:selectItem itemValue="cosmo" />
+					<f:selectItem itemValue="cyborg" />
+					<f:selectItem itemValue="darkly" />
+					<f:selectItem itemValue="flatly" />
+					<f:selectItem itemValue="journal" />
+					<f:selectItem itemValue="lumen" />
+					<f:selectItem itemValue="readable" />
+					<f:selectItem itemValue="sandstone" />
+					<f:selectItem itemValue="simplex" />
+					<f:selectItem itemValue="slate" />
+					<f:selectItem itemValue="spacelab" />
+					<f:selectItem itemValue="superhero" />
+					<f:selectItem itemValue="united" />
+					<f:selectItem itemValue="yeti" />
+				</b:selectOneMenu>
+
+
+
+
+
+			</b:navbarLinks>
+		</b:navBar>
+</b:container>
+
+
+
+	</b:form>
+	<b:container >
+		<b:carousel id="tiovivo" interval="2500">
+			<b:carouselItem>
+				<img src="img/img1.jpg" alt="Valladolid" />
+				<b:carouselCaption>
+					<h2>You'll love Valladolid!</h2>
+				</b:carouselCaption>
+			</b:carouselItem>
+			<b:carouselItem caption="Valladolid .">
+				<img src="img/img2.jpg" alt="Valladolid" />
+			</b:carouselItem>
+
+
+		</b:carousel>
+	
+	</b:container>
+<b:container >
+<br/>
+		<b:form>
+		<b:commandButton value="Continuar" style="background: linear-gradient(to right, rgba(117,88,165,1) 0%,rgba(37,184,213,1) 99%)!important;border-radius: 40px;color: #fff!important;border: 0px"/>
+	</b:form>
+	</b:container>
+</h:body>
+</html>
