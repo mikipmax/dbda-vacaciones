@@ -43,7 +43,7 @@ compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
 compile group: 'org.jboss.resteasy', name: 'resteasy-jackson2-provider', version: '3.9.2.Final'
 
 // https://mvnrepository.com/artifact/javax.servlet/jstl
-compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+//compile group: 'javax.servlet', name: 'jstl', version: '1.2'
 
 // https://mvnrepository.com/artifact/javax.servlet/servlet-api
 //providedCompile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
